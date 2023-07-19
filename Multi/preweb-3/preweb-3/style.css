@@ -153,35 +153,100 @@ body{
 }
 .chicken{
 	width: 100px;
-	right: 50px;
-	bottom: 20px;
+	right: 30px;
+	bottom: 30px;
+	animation: chimpken 2s infinite linear;
+}
+
+@keyframes chimpken {
+	0%{
+		rotate: 0deg;
+	}
+	77.75%{
+		rotate: 0deg;
+	}
+	78.75%{
+		rotate: -20deg;
+	}
+	80.75%{
+		rotate: 0deg;
+	}
 }
 .tree-1{
-	width: 200px;
-	left: -40px;
+	transform: scale(0);
+	left: -150px;
 	bottom: 55px;
 	z-index: 5;
+	transform-origin: bottom center;
 }
 .tree-2{
-	width: 200px;
-	left: 30px;
+	transform: scale(0);
+	left: -60px;
 	bottom: 80px;
 	z-index: 2;
+	transform-origin: bottom center;
 }
 .tree-3{
-	width: 200px;
-	left: 210px;
+	transform: scale(0.4);
+	left: 120px;
 	bottom: 30px;
 	z-index: 6;
+	transform-origin: bottom center;
 }
 .tree-4{
-	width: 200px;
-	left: 120px;
-	bottom: 38px;
+	transform: scale(0);
+	left: 20px;
+	bottom: 50px;
 	z-index: 4;
+	transform-origin: bottom center;
 }
 
+#grow{
+	animation: grow_die 8s infinite ease-in-out;
+}
 
+@keyframes grow_die {
+	0%{
+		transform: scale(0.01);
+	}
+	25%{
+		filter: grayscale(0%);
+		transform: scale(0.40);
+	}
+	60%{
+		filter: grayscale(100%);
+		transform: scale(0.40);
+	}
+	100%{
+		filter: grayscale(100%);
+		transform: scale(0.01);
+	}
+}
+
+#grow-cut{
+	animation: grow_cut 8s infinite linear;
+}
+
+@keyframes grow_cut {
+	0%{
+		transform: scale(0.01);
+	}
+	25%{
+		transform: scale(0.40);
+	}
+	60%{
+		transform: scale(0.40);
+		rotate: 0deg;
+	}
+	61%{
+		transform: scale(0.40);
+		rotate: -90deg;
+	}
+	100%{
+		transform: scale(0.01);
+		rotate: -90deg;
+	}
+}
 .bird-1{
 	width: 60px;
 	left: 0px;
@@ -210,6 +275,7 @@ body{
 		top: 14.12px;
 	}
 	100%{
+		
 		left: 540px;
 		top: 15px;
 	}
@@ -414,14 +480,85 @@ body{
 @keyframes bird_4{
 	0%{
 		left: 0px;
-		top: 150px;
+		top: 200px;
 	}
 	50%{
 		left: 400px;
-		top: 250px;
+		top: 300px;
+	}
+	78.75%{
+		rotate: 0deg;
+		left: 630px;
+		top: 404.375px;
+	}
+	79%{
+		rotate: 20deg;
+	}
+	100%{
+		rotate: 30deg;
+		left: 600px;
+		top: 500px;
+	}
+}
+
+.bird-5-1{
+	width: 60px;
+	left: 0px;
+	top: 150px;
+	z-index: 4;
+}
+
+.bird-5-2{
+	width: 60px;
+	left: 0px;
+	top: 150px;
+	z-index: 4;
+}
+
+.bird-6{
+	width: 60px;
+	left: 0px;
+	top: 150px;
+	z-index: 4;
+}
+
+.bird-7{
+	width: 60px;
+	left: 0px;
+	top: 150px;
+	z-index: 4;
+}
+
+.bird-7-1{
+	width: 60px;
+	left: 0px;
+	top: 150px;
+	z-index: 4;
+}
+
+.big-bird {
+	rotate: 45deg;
+	width: 300px;
+	right: 200px;
+	bottom: 900px;
+	animation: big_bird 10s infinite linear;
+}
+
+@keyframes big_bird {
+	0%{
+		left: 500px;
+		bottom: 600px;
+	}
+	75%{
+		left: 500px;
+		bottom: 600px;
+	}
+	77%{
+		left: 800px;
+		bottom: 100px;
 	}
 	100%{
 		left: 800px;
-		top: 450px;
+		bottom: 100px;
 	}
 }
