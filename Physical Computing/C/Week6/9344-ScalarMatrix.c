@@ -6,7 +6,7 @@ int main(){
     &matA[1][0], &matA[1][1], &matA[1][2],\
     &matA[2][0], &matA[2][1], &matA[2][2]);
 
-    if (matA[0][0] == matA[1][1] == matA[2][2])
+    if (matA[0][0] == matA[1][1] && matA[1][1] == matA[2][2])
     {
         if ((matA[0][1] == 0 && matA[0][2] == 0 && matA[1][2] == 0 && matA[1][0] == 0 && matA[2][0] == 0 && matA[2][1] == 0))
         {
