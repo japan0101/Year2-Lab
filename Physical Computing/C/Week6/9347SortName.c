@@ -5,13 +5,13 @@
 
 
 int cmpfunc (const void * a, const void * b) {
-   return ( *(char*)a - *(char*)b );
+   return strcmp((const char*)a , (const char*)b);
 }
 
 void capitalize(char *str){
-    for (int i = 0; i < strlen(str); i++)
+    for (int i = 0; str[i] != 0; i++)
     {
-        if (i == 1 || str[i - 1] == ' ')
+        if (i == 0 || str[i - 1] == ' ')
         {
             str[i] = toupper(str[i]);
         }else{
@@ -22,26 +22,16 @@ void capitalize(char *str){
 
 int main(){
     
-    char nameArray[20][60], name[60], buffer[60];
+    char nameArray[20][60], name[60];
     for (int i = 0; i < 20; i++)
     {
-        scanf(" %[^\n]s", &name);
-        capitalize(name);
-        for (int j = 0; j < strlen(name); j++)
-        {
-            nameArray[i][j] = name[j];
-        }
-        
-        
+        scanf(" %[^\n]s", nameArray[i]);
+        capitalize(nameArray[i]);
     }
-    qsort(nameArray, 20, sizeof(nameArray[1]), cmpfunc);
+    qsort(nameArray, 20, sizeof(nameArray[2]), cmpfunc);
     for (int i = 0; i < 20; i++)
     {
-        for (int j = 0; j < strlen(name); j++)
-        {
-            printf("%s", nameArray[i][j]);
-        }
-        printf("");
+            printf("%s\n", nameArray[i]);
     }
     
 }
