@@ -59,6 +59,7 @@
     "stdio.h": "c",
     "string": "c",
     "string.h": "c",
-    "algorithm": "c"
+    "algorithm": "c",
+    "typeinfo": "c"
   }
 }
